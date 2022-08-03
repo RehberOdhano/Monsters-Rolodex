@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import Card from './card.component.jsx'
+import Card from '../card/card.component.jsx'
 
 // CUSTOM CSS FILES
 import './card-list.styles.css'
@@ -8,7 +8,13 @@ class CardList extends Component {
   render() {
     // destructuring the this.props
     const { monsters } = this.props
-    return <Card monsters={monsters} />
+    return (
+      <div className="card-list">
+        {monsters.map((monster) => {
+          return <Card key={monster.id} monster={monster} />
+        })}
+      </div>
+    )
   }
 }
 
