@@ -3,18 +3,16 @@
 // CUSTOM CSS FILES
 import './search-box.styles.css'
 
-const SearchBox = ({ onChangeHandler, placeholder, className }) => {
-  return (
-    <div>
-      <input
-        className={`search-box ${className}`}
-        type="search"
-        placeholder={placeholder}
-        onChange={onChangeHandler}
-      />
-    </div>
-  )
-}
+const SearchBox = ({ onChangeHandler, placeholder, className }) => (
+  <div>
+    <input
+      className={`search-box ${className}`}
+      type="search"
+      placeholder={placeholder}
+      onChange={onChangeHandler}
+    />
+  </div>
+)
 
 // class SearchBox extends Component {
 //   render() {
