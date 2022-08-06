@@ -1,8 +1,8 @@
 // CUSTOM CSS FILES
 import './card.styles.css'
 
-const Card = (props) => {
-  const { name, email, id } = props
+const Card = ({ monster }) => {
+  const { name, email, id } = monster
   return (
     <div className="card-container" key={id}>
       <img
